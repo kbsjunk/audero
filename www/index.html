@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.4.min.css"/>
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/jquery.mobile-1.4.4.min.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/feed.js"></script>
+    <script src="js/application.js"></script>
+    <script>
+        $(document)
+        .on('pagebeforecreate', Application.updateIcons)
+        .one('deviceready', Application.initApplication);
+    </script>
+    <title>Audero Feed Reader</title>
+</head>
+<body>
+    <div data-role="page">
+        <header data-role="header" data-back-btn="true">
+            <h1>Audero Feed Reader</h1>
+        </header>
+        <div data-role="content">
+            <p>
+                Audero Feed Reader is a very basic feed aggregator to keep in one place all the news and the articles you care about.
+            </p>
+            <a href="add-feed.html" data-role="button">Add Feed</a>
+            <a href="list-feeds.html" data-role="button">List Feed</a>
+        </div>
+        <footer data-role="footer" data-position="fixed">
+            <h2>Created by Aurelio De Rosa</h2>
+            <a href="aurelio.html" data-icon="info" data-iconpos="notext" class="ui-btn-right">Credits</a>
+        </footer>
+    </div>
+</body>
+</html>
