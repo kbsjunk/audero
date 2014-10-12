@@ -217,4 +217,8 @@ pip-log.txt
 
 .wk/
 .wk/bower_components/
+www/.res/
+
+*.sublime-project
+*.sublime-workspace
 
